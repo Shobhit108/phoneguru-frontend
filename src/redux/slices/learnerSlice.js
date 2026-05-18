@@ -6,7 +6,7 @@ import {
   sendOtpAPI,
   verifyOtpAPI,
   getLearnerDashboardAPI,
-} from "../api/LearnerApi";
+} from "../api/learnerApi";
 
 export const createLearnerRequest = createAsyncThunk(
   "learner/createRequest",
