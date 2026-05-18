@@ -25,8 +25,7 @@ export const verifyOtpAPI = async (data) => {
     data
   );
 
-  console.log(response);
-  console.log(document.cookie);
+
 
   return response.data;
 };
