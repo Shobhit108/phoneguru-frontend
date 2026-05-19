@@ -251,13 +251,7 @@ lg:overflow-y-auto
                       })}
                       className="w-full h-14 rounded-xl border border-[#e8ddd1] dark:border-[#2a2a2a] dark:bg-[#181818] dark:text-white px-4 outline-none focus:border-orange-500"
                     />
-                    <input
-                      type="text"
-                      placeholder="Enter full name"
-                      {...register("name", {
-                        required: "Name required",
-                      })}
-                    />
+                   
 
                     {errors.name && (
                       <p className="text-red-500 text-sm mt-1">
