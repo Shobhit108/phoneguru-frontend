@@ -16,15 +16,22 @@ const TutorLogin = () => {
 
   // SEND OTP
   const handleSendOtp = async () => {
-    if (!phone) {
+    if (!phone.trim()) {
       toast.error("Enter phone number");
+      return;
+    }
+
+    const phoneRegex = /^[6-9]\d{9}$/;
+
+    if (!phoneRegex.test(phone)) {
+      toast.error("Enter a valid 10-digit phone number");
       return;
     }
 
     const result = await dispatch(sendTutorOtp(phone));
 
     if (sendTutorOtp.fulfilled.match(result)) {
-      toast.success("OTP sent");
+      toast.success("Demo OTP: 1234");
 
       setShowOtpBox(true);
     } else {
@@ -88,24 +95,28 @@ const TutorLogin = () => {
             </label>
 
             <input
-              type="text"
+              type="tel"
+              inputMode="numeric"
+              maxLength={10}
               placeholder="Enter phone number"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
               className="
-                w-full
-                h-14
-                rounded-2xl
-                border
-                border-gray-300
-                dark:border-[#2a2a2a]
-                bg-white
-                dark:bg-[#121212]
-                dark:text-white
-                px-4
-                outline-none
-                focus:border-orange-500
-              "
+    w-full
+    h-14
+    rounded-2xl
+    border
+    border-gray-300
+    dark:border-[#2a2a2a]
+    bg-white
+    dark:bg-[#121212]
+    dark:text-white
+    dark:placeholder:text-gray-500
+    px-4
+    outline-none
+    focus:border-orange-500
+    transition-all
+  "
             />
           </div>
 
@@ -132,7 +143,18 @@ const TutorLogin = () => {
                 <label className="block text-sm font-semibold mb-2 text-[#222] dark:text-white">
                   OTP
                 </label>
+                <div className="rounded-2xl border border-yellow-500/30 bg-yellow-500/10 p-4">
+                  <p className="text-sm font-semibold text-yellow-500">
+                    Demo Mode
+                  </p>
 
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                    OTP service is currently disabled. Use OTP:{" "}
+                    <span className="font-bold text-white dark:text-white">
+                      1234
+                    </span>
+                  </p>
+                </div>
                 <input
                   type="text"
                   placeholder="Enter OTP"
