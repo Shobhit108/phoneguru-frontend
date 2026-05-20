@@ -1,16 +1,131 @@
-# React + Vite
+# 📱 Phone Guru
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Phone Guru is a full-stack learning platform designed to help senior citizens and non-technical users become comfortable with smartphones, digital payments, and essential online services through guided tutor-led sessions.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 Live: https://phoneguru.vercel.app
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Problem It Solves
 
-## Expanding the ESLint configuration
+Many senior citizens and non-technical users struggle with smartphones, online payments, and digital services.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Phone Guru bridges this digital gap by connecting learners with tutors who can provide personalized guidance in an easy-to-understand and senior-friendly environment.
+
+---
+
+## Features
+
+### Authentication & Security
+- OTP-based Login
+- JWT Authentication
+- Secure Role-Based Access
+
+### Tutor & Learner System
+- Dedicated Tutor Dashboard
+- Dedicated Learner Dashboard
+- Tutor Profile Creation
+- Session Request Management
+
+### Session Management
+- Session Scheduling
+- Today Sessions
+- Upcoming Sessions
+- Session History
+- Request Accept / Reject Flow
+
+### Smart Location Support
+- Auto Location Detection using Geolocation
+- Manual Location Selection Option
+- Better tutor discovery based on user location
+
+### User Experience
+- Senior-Friendly Responsive UI
+- Accessibility-Focused Design
+- Mobile & Desktop Support
+- Optimized User Flow
+
+### API Integration
+- 10+ REST APIs Integrated
+- Redux Toolkit State Management
+
+---
+
+## Tech Stack
+
+### Frontend
+- React.js
+- Redux Toolkit
+- Tailwind CSS
+- Material UI
+- React Router
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose
+
+### Authentication
+- JWT Authentication
+- OTP Verification
+
+### Deployment
+- Vercel
+- Render
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+Backend: https://github.com/Shobhit108/phoneguru-backend.git
+Frontend:https://github.com/Shobhit108/phoneguru-frontend.git
+```
+
+Go to project directory
+
+```bash
+cd phone-guru
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run frontend
+
+```bash
+npm run dev
+```
+
+Run backend
+
+```bash
+npm run dev
+```
+
+---
+
+## Future Improvements
+
+- Video Calling Support
+- Multi-Language Learning Support
+- AI-Based Tutor Recommendations
+- Improved Analytics Dashboard
+
+---
+
+## Author
+
+**Shobhit Tiwari**
+
+- Portfolio: https://shobhitportfolio-one.vercel.app
+- LinkedIn: https://www.linkedin.com/in/shobhittiwari108/
